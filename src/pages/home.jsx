@@ -168,101 +168,241 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DEPARTMENTS */}
-      <section id="departments" className="bg-[#F8FAFC] py-24">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+     {/* DEPARTMENTS */}
+<section id="departments" className="bg-[#F8FAFC] py-24">
+  <div className="max-w-7xl mx-auto px-6 text-center">
 
-          <h2 className="text-5xl font-bold text-[#0A2A5E]">
-            Our Specialities
-          </h2>
+    <h2 className="text-5xl font-bold text-[#0A2A5E] mb-16">
+      Our Specialities
+    </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <div
-  key={dept}
-  className="bg-white rounded-[30px] p-8 shadow-md hover:shadow-2xl transition duration-300 border border-gray-100"
->
-  <div className="w-16 h-16 rounded-2xl bg-blue-100 mx-auto mb-5 flex items-center justify-center text-2xl">
-    🏥
-  </div>
-
-  <h3 className="text-2xl font-bold text-[#0A2A5E]">
-    {dept}
-  </h3>
-
-  <p className="text-gray-500 mt-4 leading-relaxed">
-    Advanced healthcare with experienced specialists and modern treatment.
-  </p>
-
-  <button className="mt-5 text-[#0A2A5E] font-semibold">
-    Learn More →
-  </button>
-</div> (
-              <div
-                key={dept}
-                className="bg-white rounded-[30px] p-8 shadow-md hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl font-bold text-[#0A2A5E]">
-                  {dept}
-                </h3>
-              </div>
-            ))
+      {[
+        "Orthopedics",
+        "Cardiology",
+        "Neurology",
+        "Pediatrics",
+        "ENT",
+        "Dermatology",
+        "General Medicine",
+        "Emergency Care",
+      ].map((dept, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-[30px] p-8 shadow-md hover:shadow-2xl transition duration-300 border border-gray-100"
+        >
+          <div className="w-16 h-16 rounded-2xl bg-blue-100 mx-auto mb-5 flex items-center justify-center text-2xl">
+            🏥
           </div>
+
+          <h3 className="text-2xl font-bold text-[#0A2A5E]">
+            {dept}
+          </h3>
+
+          <p className="text-gray-500 mt-4 leading-relaxed">
+            Advanced healthcare with experienced specialists.
+          </p>
+
+          <button className="mt-5 text-[#0A2A5E] font-semibold">
+            Learn More →
+          </button>
         </div>
-      </section>
-
-      {/* DOCTORS */}
-      <div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl w-[350px] hover:scale-105 transition duration-300">
-
-  <img
-    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
-    alt="Doctor"
-    className="w-full h-[350px] object-cover"
-  />
-
-  <div className="p-8">
-    <h3 className="text-3xl font-bold text-[#0A2A5E]">
-      Dr. Satyam Yadav
-    </h3>
-
-    <p className="text-gray-500 mt-3 text-lg">
-      Orthopedics Specialist
-    </p>
-
-    <button className="mt-5 bg-[#0A2A5E] text-white px-5 py-3 rounded-full">
-      Book Appointment
-    </button>
+      ))}
+    </div>
   </div>
-</div>
+</section>
 
-      {/* APPOINTMENT */}
-      <section id="appointment" className="bg-[#0A2A5E] py-24 text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+     {/* DOCTORS SECTION */}
+<section id="doctors" className="bg-white py-28">
+  <div className="max-w-7xl mx-auto px-6">
 
-          <h2 className="text-5xl font-bold">
+    {/* Heading */}
+    <div className="text-center">
+      <span className="text-[#0A2A5E] font-semibold uppercase tracking-wider">
+        Our Doctors
+      </span>
+
+      <h2 className="text-5xl font-bold text-[#0A2A5E] mt-4">
+        Meet Our Medical
+        <br />
+        Specialists
+      </h2>
+
+      <p className="text-gray-500 mt-5 max-w-2xl mx-auto">
+        Experienced doctors dedicated to delivering
+        world-class patient care.
+      </p>
+    </div>
+
+    {/* Doctor Cards */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+
+      {/* Doctor Card */}
+      <div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+        <img
+          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
+          alt="Doctor"
+          className="w-full h-[350px] object-cover"
+        />
+
+        <div className="p-8">
+          <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
+            Orthopedics
+          </span>
+
+          <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
+            Dr. Satyam Yadav
+          </h3>
+
+          <p className="text-gray-500 mt-3 text-lg">
+            Specialist in orthopedic treatments and advanced bone care.
+          </p>
+
+          <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
             Book Appointment
-          </h2>
-
-          <div className="bg-white rounded-[35px] p-10 mt-12 text-black shadow-xl">
-
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full border p-4 rounded-2xl mb-4"
-            />
-
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="w-full border p-4 rounded-2xl mb-4"
-            />
-
-            <button className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full">
-              Book Appointment
-            </button>
-          </div>
+          </button>
         </div>
-      </section>
+      </div>
+
+      {/* Placeholder Doctors */}
+      {[1, 2].map((item) => (
+        <div
+          key={item}
+          className="bg-[#F8FAFC] rounded-[35px] p-10 border border-gray-200 flex flex-col justify-center items-center text-center shadow-md"
+        >
+          <div className="w-28 h-28 rounded-full bg-gray-200"></div>
+
+          <h3 className="text-2xl font-bold text-[#0A2A5E] mt-6">
+            Doctor Coming Soon
+          </h3>
+
+          <p className="text-gray-500 mt-3">
+            Specialist details will be added soon.
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+{/* APPOINTMENT SECTION */}
+<section
+  id="appointment"
+  className="bg-gradient-to-r from-[#0A2A5E] to-[#144B9B] py-28 text-white"
+>
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* Heading */}
+    <div className="text-center">
+      <span className="uppercase tracking-wider text-blue-200 font-semibold">
+        Book Appointment
+      </span>
+
+      <h2 className="text-5xl font-bold mt-4">
+        Schedule Your Visit
+      </h2>
+
+      <p className="text-blue-100 mt-5 max-w-2xl mx-auto text-lg">
+        Book appointments with our specialists quickly and easily.
+      </p>
+    </div>
+
+    {/* Form Card */}
+    <div className="mt-16 bg-white rounded-[40px] p-10 lg:p-14 shadow-2xl text-black">
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {/* Department */}
+        <div>
+          <label className="block mb-2 font-semibold text-[#0A2A5E]">
+            Department
+          </label>
+
+          <select className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]">
+            <option>Select Department</option>
+            <option>Orthopedics</option>
+            <option>Cardiology</option>
+            <option>Neurology</option>
+            <option>Pediatrics</option>
+            <option>ENT</option>
+            <option>Dermatology</option>
+          </select>
+        </div>
+
+        {/* Doctor */}
+        <div>
+          <label className="block mb-2 font-semibold text-[#0A2A5E]">
+            Doctor
+          </label>
+
+          <select className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]">
+            <option>Select Doctor</option>
+            <option>Dr. Satyam Yadav</option>
+          </select>
+        </div>
+
+        {/* Date */}
+        <div>
+          <label className="block mb-2 font-semibold text-[#0A2A5E]">
+            Appointment Date
+          </label>
+
+          <input
+            type="date"
+            className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
+          />
+        </div>
+
+        {/* Name */}
+        <div>
+          <label className="block mb-2 font-semibold text-[#0A2A5E]">
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter Full Name"
+            className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
+          />
+        </div>
+
+        {/* Phone */}
+        <div>
+          <label className="block mb-2 font-semibold text-[#0A2A5E]">
+            Phone Number
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter Phone Number"
+            className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
+          />
+        </div>
+
+        {/* Symptoms */}
+        <div>
+          <label className="block mb-2 font-semibold text-[#0A2A5E]">
+            Symptoms
+          </label>
+
+          <input
+            type="text"
+            placeholder="Brief Description"
+            className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
+          />
+        </div>
+      </div>
+
+      {/* Button */}
+      <div className="text-center mt-10">
+        <button className="bg-[#0A2A5E] text-white px-10 py-4 rounded-full hover:bg-blue-900 transition shadow-xl font-semibold">
+          Book Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="py-20 bg-white">
   <div className="max-w-7xl mx-auto px-6 text-center">
@@ -284,24 +424,99 @@ export default function Home() {
   </div>
 </section>
 
-      {/* CONTACT */}
-      <section
+     {/* CONTACT / FOOTER */}
+<section
   id="contact"
-  className="bg-[#071F45] text-white py-20"
+  className="bg-[#071F45] text-white pt-24 pb-10"
 >
-  <div className="max-w-7xl mx-auto px-6 text-center">
+  <div className="max-w-7xl mx-auto px-6">
 
-    <h2 className="text-5xl font-bold mb-8">
-      Contact Us
-    </h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-    <div className="space-y-4 text-xl text-blue-100">
-      <p>📞 080087 00951</p>
-      <p>✉ tridenthospitals@gmail.com</p>
-      <p>📍 Shamshabad, Hyderabad</p>
+      {/* Hospital Info */}
+      <div>
+        <img
+          src="/logo.png"
+          alt="Trident Hospitals"
+          className="h-20 mb-5 bg-white rounded-2xl p-2"
+        />
+
+        <p className="text-blue-100 leading-relaxed">
+          Trident Hospitals provides advanced multi-speciality
+          healthcare with compassionate patient care,
+          expert specialists, and modern technology.
+        </p>
+      </div>
+
+      {/* Quick Links */}
+      <div>
+        <h3 className="text-2xl font-bold mb-6">
+          Quick Links
+        </h3>
+
+        <ul className="space-y-4 text-blue-100">
+
+          <li>
+            <a href="#home" className="hover:text-white transition">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#departments" className="hover:text-white transition">
+              Departments
+            </a>
+          </li>
+
+          <li>
+            <a href="#doctors" className="hover:text-white transition">
+              Doctors
+            </a>
+          </li>
+
+          <li>
+            <a href="#appointment" className="hover:text-white transition">
+              Appointment
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Departments */}
+      <div>
+        <h3 className="text-2xl font-bold mb-6">
+          Departments
+        </h3>
+
+        <ul className="space-y-4 text-blue-100">
+          <li>Orthopedics</li>
+          <li>Cardiology</li>
+          <li>Neurology</li>
+          <li>Pediatrics</li>
+          <li>ENT</li>
+        </ul>
+      </div>
+
+      {/* Contact */}
+      <div>
+        <h3 className="text-2xl font-bold mb-6">
+          Contact Us
+        </h3>
+
+        <div className="space-y-4 text-blue-100 text-lg">
+          <p>📞 080087 00951</p>
+          <p>✉ tridenthospitals@gmail.com</p>
+          <p>📍 Shamshabad, Hyderabad</p>
+        </div>
+
+        <button className="mt-6 bg-white text-[#071F45] px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+          Emergency Care
+        </button>
+      </div>
     </div>
 
-    <div className="border-t border-blue-800 mt-12 pt-8 text-gray-400">
+    {/* Bottom Footer */}
+    <div className="border-t border-blue-800 mt-16 pt-8 text-center text-blue-200">
       © 2026 Trident Hospitals. All Rights Reserved.
     </div>
   </div>
