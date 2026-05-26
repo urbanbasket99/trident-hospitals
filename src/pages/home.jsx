@@ -7,6 +7,11 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -450,6 +455,73 @@ export default function Home() {
     </div>
   </div>
 </section>
+{/* TESTIMONIALS */}
+<section className="bg-[#F8FAFC] py-28">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center">
+      <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
+        Testimonials
+      </span>
+
+      <h2 className="text-5xl font-bold text-[#0A2A5E] mt-4">
+        What Our Patients Say
+      </h2>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+
+      {/* Testimonial 1 */}
+      <div className="bg-white rounded-[35px] p-10 shadow-lg hover:shadow-2xl transition">
+        <div className="text-yellow-500 text-2xl">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-600 mt-5 text-lg leading-relaxed">
+          Excellent doctors and caring staff.
+          The treatment was professional and smooth.
+        </p>
+
+        <h4 className="font-bold text-[#0A2A5E] mt-6">
+          Ravi Kumar
+        </h4>
+      </div>
+
+      {/* Testimonial 2 */}
+      <div className="bg-white rounded-[35px] p-10 shadow-lg hover:shadow-2xl transition">
+        <div className="text-yellow-500 text-2xl">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-600 mt-5 text-lg leading-relaxed">
+          Clean facilities and highly experienced doctors.
+          Strongly recommended.
+        </p>
+
+        <h4 className="font-bold text-[#0A2A5E] mt-6">
+          Priya Sharma
+        </h4>
+      </div>
+
+      {/* Testimonial 3 */}
+      <div className="bg-white rounded-[35px] p-10 shadow-lg hover:shadow-2xl transition">
+        <div className="text-yellow-500 text-2xl">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-600 mt-5 text-lg leading-relaxed">
+          Emergency care was fast and professional.
+          Very thankful to the hospital team.
+        </p>
+
+        <h4 className="font-bold text-[#0A2A5E] mt-6">
+          Ahmed Khan
+        </h4>
+      </div>
+
+    </div>
+  </div>
+</section>
 {/* APPOINTMENT SECTION */}
 <section
   id="appointment"
@@ -684,6 +756,34 @@ export default function Home() {
       © 2026 Trident Hospitals. All Rights Reserved.
     </div>
   </div>
+  {/* Social Icons */}
+<div className="flex justify-center lg:justify-start gap-4 mt-8">
+
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    className="bg-white text-[#071F45] p-4 rounded-full hover:scale-110 transition"
+  >
+    <FaFacebookF size={20} />
+  </a>
+
+  <a
+    href="https://instagram.com"
+    target="_blank"
+    className="bg-white text-[#071F45] p-4 rounded-full hover:scale-110 transition"
+  >
+    <FaInstagram size={20} />
+  </a>
+
+  <a
+    href="https://youtube.com"
+    target="_blank"
+    className="bg-white text-[#071F45] p-4 rounded-full hover:scale-110 transition"
+  >
+    <FaYoutube size={20} />
+  </a>
+
+</div>
 </section>
 
       {/* WHATSAPP */}
