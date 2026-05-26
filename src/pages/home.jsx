@@ -238,33 +238,197 @@ export default function Home() {
     {/* Doctor Cards */}
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
 
-      {/* Doctor Card */}
-      <div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+      {/* DOCTOR 1 */}
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
-        <img
-          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
-          alt="Doctor"
-          className="w-full h-[350px] object-cover"
-        />
+  <img
+    src="/satyam yadav.jpg"
+    alt="Dr. Satyam Yadav"
+    className="w-full h-[350px] object-cover"
+  />
 
-        <div className="p-8">
-          <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
-            Orthopedics
-          </span>
+  <div className="p-8">
+    <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
+      Orthopedics
+    </span>
 
-          <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
-            Dr. Satyam Yadav
-          </h3>
+    <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
+      Dr. Satyam Yadav
+    </h3>
 
-          <p className="text-gray-500 mt-3 text-lg">
-            Specialist in orthopedic treatments and advanced bone care.
-          </p>
+    <p className="text-gray-500 mt-3 text-lg">
+      Specialist in orthopedic treatments and advanced bone care.
+    </p>
 
-          <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
-            Book Appointment
-          </button>
-        </div>
-      </div>
+    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
+      Book Appointment
+    </button>
+  </div>
+</div>
+
+{/* DOCTOR 2 */}
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+  <img
+    src="/chaitanya.jpg"
+    alt="Doctor"
+    className="w-full h-[350px] object-cover"
+  />
+
+  <div className="p-8">
+    <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
+      Gynacology
+    </span>
+
+    <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
+     Dr Chaitanya B
+    </h3>
+
+    <p className="text-gray-500 mt-3 text-lg">
+      Expert in heart care, cardiac diagnosis and treatments.
+    </p>
+
+    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
+      Book Appointment
+    </button>
+  </div>
+</div>
+
+{/* DOCTOR 3 */}
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+  <img
+    src="/drkasha.jpg"
+    alt="Doctor"
+    className="w-full h-[350px] object-cover"
+  />
+
+  <div className="p-8">
+    <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
+      Neurology
+    </span>
+
+    <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
+      Dr. Kasha
+    </h3>
+
+    <p className="text-gray-500 mt-3 text-lg">
+      Specialist in neurological disorders and brain care.
+    </p>
+
+    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
+      Book Appointment
+    </button>
+  </div>
+</div>
+{/* DOCTOR 4 */}
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+  <img
+    src="/RAKESH.png"
+    alt="Doctor"
+    className="w-full h-[350px] object-cover"
+  />
+
+  <div className="p-8">
+    <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
+      Neurology
+    </span>
+
+    <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
+      Dr. Rakesh
+    </h3>
+
+    <p className="text-gray-500 mt-3 text-lg">
+      Specialist in neurological disorders and brain care.
+    </p>
+
+    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
+      Book Appointment
+    </button>
+  </div>
+</div>
+{/* DOCTOR 5 */}
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+  <img
+    src="/soma Rakesh.jpeg"
+    alt="Doctor"
+    className="w-full h-[350px] object-cover"
+  />
+
+  <div className="p-8">
+    <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
+      Neurology
+    </span>
+
+    <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
+      Dr.soma Rakesh
+    </h3>
+
+    <p className="text-gray-500 mt-3 text-lg">
+      Specialist in neurological disorders and brain care.
+    </p>
+
+    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
+      Book Appointment
+    </button>
+  </div>
+</div>
+{/* DOCTOR 6 */}
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+  <img
+    src="/ravi kumar.jpg"
+    alt="Doctor"
+    className="w-full h-[350px] object-cover"
+  />
+
+  <div className="p-8">
+    <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
+      Neurology
+    </span>
+
+    <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
+      Dr. ravi kumar
+    </h3>
+
+    <p className="text-gray-500 mt-3 text-lg">
+      Specialist in neurological disorders and brain care.
+    </p>
+
+    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
+      Book Appointment
+    </button>
+  </div>
+</div>
+{/* DOCTOR 7 */}
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+  <img
+    src="/DrJalapathiReddy.jpg"
+    alt="Doctor"
+    className="w-full h-[350px] object-cover"
+  />
+
+  <div className="p-8">
+    <span className="text-sm text-[#0A2A5E] font-semibold uppercase">
+      Neurology
+    </span>
+
+    <h3 className="text-3xl font-bold text-[#0A2A5E] mt-3">
+      Dr.JalapathiReddy
+    </h3>
+
+    <p className="text-gray-500 mt-3 text-lg">
+      Specialist in neurological disorders and brain care.
+    </p>
+
+    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
+      Book Appointment
+    </button>
+  </div>
+</div>
 
       {/* Placeholder Doctors */}
       {[1, 2].map((item) => (
@@ -527,7 +691,7 @@ export default function Home() {
         href="https://wa.me/918008700951"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-f right-6 z-50"
       >
         <div className="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-xl text-3xl">
           💬
