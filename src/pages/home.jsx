@@ -178,16 +178,26 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
 
-            {[
-              "Orthopedics",
-              "Cardiology",
-              "Neurology",
-              "Pediatrics",
-              "ENT",
-              "Dermatology",
-              "General Medicine",
-              "Emergency Care",
-            ].map((dept) => (
+            <div
+  key={dept}
+  className="bg-white rounded-[30px] p-8 shadow-md hover:shadow-2xl transition duration-300 border border-gray-100"
+>
+  <div className="w-16 h-16 rounded-2xl bg-blue-100 mx-auto mb-5 flex items-center justify-center text-2xl">
+    🏥
+  </div>
+
+  <h3 className="text-2xl font-bold text-[#0A2A5E]">
+    {dept}
+  </h3>
+
+  <p className="text-gray-500 mt-4 leading-relaxed">
+    Advanced healthcare with experienced specialists and modern treatment.
+  </p>
+
+  <button className="mt-5 text-[#0A2A5E] font-semibold">
+    Learn More →
+  </button>
+</div> (
               <div
                 key={dept}
                 className="bg-white rounded-[30px] p-8 shadow-md hover:shadow-xl transition"
@@ -196,40 +206,34 @@ export default function Home() {
                   {dept}
                 </h3>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
 
       {/* DOCTORS */}
-      <section id="doctors" className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl w-[350px] hover:scale-105 transition duration-300">
 
-          <h2 className="text-5xl font-bold text-[#0A2A5E]">
-            Our Doctors
-          </h2>
+  <img
+    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
+    alt="Doctor"
+    className="w-full h-[350px] object-cover"
+  />
 
-          <div className="mt-16 flex justify-center">
-            <div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-lg w-[350px]">
-              <img
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
-                alt="Doctor"
-                className="w-full h-[350px] object-cover"
-              />
+  <div className="p-8">
+    <h3 className="text-3xl font-bold text-[#0A2A5E]">
+      Dr. Satyam Yadav
+    </h3>
 
-              <div className="p-8">
-                <h3 className="text-3xl font-bold text-[#0A2A5E]">
-                  Dr. Satyam Yadav
-                </h3>
+    <p className="text-gray-500 mt-3 text-lg">
+      Orthopedics Specialist
+    </p>
 
-                <p className="text-gray-500 mt-3">
-                  Orthopedics Specialist
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <button className="mt-5 bg-[#0A2A5E] text-white px-5 py-3 rounded-full">
+      Book Appointment
+    </button>
+  </div>
+</div>
 
       {/* APPOINTMENT */}
       <section id="appointment" className="bg-[#0A2A5E] py-24 text-white">
@@ -260,16 +264,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="bg-[#071F45] text-white py-24 text-center">
-        <h2 className="text-4xl font-bold">
-          Contact Us
-        </h2>
+      <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-6 text-center">
 
-        <p className="mt-6">📞 080087 00951</p>
-        <p>✉ tridenthospitals@gmail.com</p>
-        <p>📍 Shamshabad, Hyderabad</p>
-      </section>
+    <h2 className="text-5xl font-bold text-[#0A2A5E] mb-10">
+      Find Us
+    </h2>
+
+    <iframe
+      title="Hospital Location"
+      src="https://www.google.com/maps?q=Shamshabad,Hyderabad&output=embed"
+      width="100%"
+      height="450"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      className="rounded-[30px] shadow-xl"
+    ></iframe>
+  </div>
+</section>
+
+      {/* CONTACT */}
+      <section
+  id="contact"
+  className="bg-[#071F45] text-white py-20"
+>
+  <div className="max-w-7xl mx-auto px-6 text-center">
+
+    <h2 className="text-5xl font-bold mb-8">
+      Contact Us
+    </h2>
+
+    <div className="space-y-4 text-xl text-blue-100">
+      <p>📞 080087 00951</p>
+      <p>✉ tridenthospitals@gmail.com</p>
+      <p>📍 Shamshabad, Hyderabad</p>
+    </div>
+
+    <div className="border-t border-blue-800 mt-12 pt-8 text-gray-400">
+      © 2026 Trident Hospitals. All Rights Reserved.
+    </div>
+  </div>
+</section>
 
       {/* WHATSAPP */}
       <a
