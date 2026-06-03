@@ -82,7 +82,7 @@ const sendEmail = (e) => {
       </div>
 
       {/* NAVBAR */}
-      <nav className="bg-white shadow-sm sticky top-0 z-50">
+      <nav className="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
         <div className="w-full px-6 lg:px-10 py-3 flex justify-between items-center">
 
           <img
@@ -175,14 +175,14 @@ const sendEmail = (e) => {
         id="home"
         className="bg-gradient-to-r from-[#0A2A5E] via-[#103D82] to-[#144B9B] text-white"
       >
-        <div className="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 items-center gap-12">
+          <div className="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 items-center gap-12">
 
           <div>
             <span className="inline-block bg-white/20 px-5 py-3 rounded-full text-sm font-medium">
               Premium Multi-Speciality Hospital
             </span>
 
-            <h1 className="text-5xl lg:text-7xl font-bold mt-8 leading-tight">
+            <h1 className="text-5xl lg:text-8xl leading-tight tracking-tight font-bold mt-8 leading-tight">
               Your Health,
               <br />
               Our Priority
@@ -192,15 +192,15 @@ const sendEmail = (e) => {
               Advanced multi-speciality healthcare in
               Shamshabad, Hyderabad with expert doctors
               and compassionate care.
-            </p>
+                   </p>
 
-            <div className="flex flex-wrap gap-4 mt-10">
-             <a
-  href="#appointment"
-  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
->
-  Book Appointment
-</a>
+                      <div className="flex flex-wrap gap-4 mt-10">
+                   <a
+                        href="#appointment"
+                    className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 hover:scale-105 transition duration-300 transition"
+                        >
+                       Book Appointment
+                          </a>
 
               <button className="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-[#0A2A5E] transition">
                 Emergency Care
@@ -217,11 +217,57 @@ const sendEmail = (e) => {
           </div>
         </div>
       </section>
+      {/* STATS */}
+<section className="bg-white py-14">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div className="bg-[#F8FAFC] rounded-[30px] p-8 text-center shadow-md">
+        <h3 className="text-5xl font-bold text-[#0A2A5E]">
+          10+
+        </h3>
+        <p className="text-gray-500 mt-3">
+          Expert Doctors
+        </p>
+      </div>
+
+      <div className="bg-[#F8FAFC] rounded-[30px] p-8 text-center shadow-md">
+        <h3 className="text-5xl font-bold text-[#0A2A5E]">
+          25K+
+        </h3>
+        <p className="text-gray-500 mt-3">
+          Happy Patients
+        </p>
+      </div>
+
+      <div className="bg-[#F8FAFC] rounded-[30px] p-8 text-center shadow-md">
+        <h3 className="text-5xl font-bold text-[#0A2A5E]">
+          15+
+        </h3>
+        <p className="text-gray-500 mt-3">
+          Specialities
+        </p>
+      </div>
+
+      <div className="bg-[#F8FAFC] rounded-[30px] p-8 text-center shadow-md">
+        <h3 className="text-5xl font-bold text-[#0A2A5E]">
+          24/7
+        </h3>
+        <p className="text-gray-500 mt-3">
+          Emergency Care
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
      {/* DEPARTMENTS */}
 <section id="departments" className="bg-[#F8FAFC] py-24">
+  
   <div className="max-w-7xl mx-auto px-6 text-center">
-
+<div className="w-24 h-1 bg-[#0A2A5E] rounded-full mx-auto mb-5"></div>
     <h2 className="text-5xl font-bold text-[#0A2A5E] mb-16">
       Our Specialities
     </h2>
@@ -264,11 +310,12 @@ const sendEmail = (e) => {
 </section>
 
      {/* DOCTORS SECTION */}
-<section id="doctors" className="bg-white py-28">
+<section id="doctors" className="bg-gradient-to-b from-white to-[#F8FAFC] py-28">
   <div className="max-w-7xl mx-auto px-6">
 
     {/* Heading */}
     <div className="text-center">
+      <div className="w-24 h-1 bg-[#0A2A5E] rounded-full mx-auto mb-5"></div>
       <span className="text-[#0A2A5E] font-semibold uppercase tracking-wider">
         Our Doctors
       </span>
@@ -289,7 +336,7 @@ const sendEmail = (e) => {
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
 
       {/* DOCTOR 1 */}
-<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
   <img
     src="/satyam yadav.jpg"
@@ -320,7 +367,7 @@ const sendEmail = (e) => {
 </div>
 
 {/* DOCTOR 2 */}
-<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
   <img
     src="/chaitanya.jpg"
@@ -351,7 +398,7 @@ const sendEmail = (e) => {
 </div>
 
 {/* DOCTOR 3 */}
-<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+<div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
   <img
     src="/drkasha.jpg"
@@ -522,10 +569,13 @@ const sendEmail = (e) => {
   </div>
 </section>
 {/* TESTIMONIALS */}
+
 <section className="bg-[#F8FAFC] py-28">
   <div className="max-w-7xl mx-auto px-6">
 
+
     <div className="text-center">
+      <div className="w-24 h-1 bg-[#0A2A5E] rounded-full mx-auto mb-5"></div>
       <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
         Testimonials
       </span>
@@ -893,7 +943,7 @@ const sendEmail = (e) => {
   <div className="bg-[#0A2A5E] hover:bg-blue-900 transition text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl text-3xl">
     📞
   </div>
-</a>
+</a> 
     </div>
   );
 }
