@@ -885,6 +885,15 @@ const sendEmail = (e) => {
     </span>
   </div>
 </a>
+{/* CALL BUTTON */}
+<a
+  href="tel:08008700951"
+  className="fixed bottom-24 right-6 z-50"
+>
+  <div className="bg-[#0A2A5E] hover:bg-blue-900 transition text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl text-3xl">
+    📞
+  </div>
+</a>
     </div>
   );
 }
