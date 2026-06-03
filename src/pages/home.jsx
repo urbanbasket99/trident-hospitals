@@ -31,7 +31,7 @@ export default function Home() {
 
             <div className="hidden md:flex items-center gap-2">
               <Mail size={16} />
-              <span>tridenthospitals@gmail.com</span>
+              <span>tridenthospital@gmail.com</span>
             </div>
           </div>
 
@@ -741,7 +741,7 @@ export default function Home() {
 
         <div className="space-y-4 text-blue-100 text-lg">
           <p>📞 080087 00951</p>
-          <p>✉ tridenthospitals@gmail.com</p>
+          <p>✉ tridenthospital@gmail.com</p>
           <p>📍 Shamshabad, Hyderabad</p>
         </div>
 
