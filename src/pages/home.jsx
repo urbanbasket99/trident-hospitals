@@ -712,23 +712,35 @@ const sendEmail = (e) => {
   
 </section>
 
-      <section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-6 text-center">
+      {/* GOOGLE MAPS */}
+<section className="bg-white py-24">
+  <div className="max-w-7xl mx-auto px-6">
 
-    <h2 className="text-5xl font-bold text-[#0A2A5E] mb-10">
-      Find Us
-    </h2>
+    <div className="text-center">
+      <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
+        Find Us
+      </span>
 
-    <iframe
-      title="Hospital Location"
-      src="https://www.google.com/maps?q=Shamshabad,Hyderabad&output=embed"
-      width="100%"
-      height="450"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      className="rounded-[30px] shadow-xl"
-    ></iframe>
+      <h2 className="text-5xl font-bold text-[#0A2A5E] mt-4">
+        Visit Trident Hospitals
+      </h2>
+
+      <p className="text-gray-500 mt-4 text-lg">
+        Shamshabad, Hyderabad
+      </p>
+    </div>
+
+    <div className="mt-14 rounded-[35px] overflow-hidden shadow-2xl">
+      <iframe
+        src="https://www.google.com/maps?q=Shamshabad,Hyderabad&output=embed"
+        width="100%"
+        height="500"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
   </div>
 </section>
 
@@ -859,16 +871,20 @@ const sendEmail = (e) => {
 </section>
 
       {/* WHATSAPP */}
-      <a
-        href="https://wa.me/918008700951"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-f right-6 z-50"
-      >
-        <div className="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-xl text-3xl">
-          💬
-        </div>
-      </a>
+     {/* WHATSAPP BUTTON */}
+<a
+  href="https://wa.me/918008700951?text=Hello%20Trident%20Hospitals,%20I%20would%20like%20to%20book%20an%20appointment."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50"
+>
+  <div className="bg-green-500 hover:bg-green-600 transition text-white rounded-full px-6 py-4 flex items-center gap-3 shadow-2xl">
+    <span className="text-3xl">💬</span>
+    <span className="font-semibold hidden md:block">
+      Chat on WhatsApp
+    </span>
+  </div>
+</a>
     </div>
   );
 }
