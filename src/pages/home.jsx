@@ -4,6 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 
+
+
 import {
   Phone,
   Mail,
@@ -19,6 +21,7 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {
+  const [selectedDepartment, setSelectedDepartment] = useState(null);
   useEffect(() => {
   AOS.init({
     duration: 1000,
@@ -64,6 +67,131 @@ const sendEmail = (e) => {
 };
   const [menuOpen, setMenuOpen] = useState(false);
 
+const departmentDetails = {
+  Orthopedics: {
+    title: "Orthopedics Department",
+    content: `
+At Trident Hospitals, our Orthopedics Department provides specialized care for bone, joint, muscle, and spine-related conditions.
+
+Services Include:
+• Fracture & Trauma Care
+• Arthritis & Joint Pain Treatment
+• Sports Injury Management
+• Spine & Back Pain Care
+• Knee, Hip & Shoulder Treatments
+• Physiotherapy Guidance
+
+Our goal is to restore mobility, reduce pain, and help patients return to a healthy and active lifestyle.
+    `,
+  },
+
+  Cardiology: {
+    title: "Cardiology Department",
+    content: `
+The Cardiology Department at Trident Hospitals offers comprehensive heart care services with a focus on diagnosis, prevention, and treatment.
+
+Services Include:
+• ECG & Cardiac Evaluation
+• Blood Pressure Management
+• Chest Pain Diagnosis
+• Preventive Heart Checkups
+• Lifestyle Counseling
+
+We help patients maintain heart health through expert care.
+    `,
+  },
+
+  Neurology: {
+    title: "Neurology Department",
+    content: `
+Our Neurology Department provides expert treatment for disorders affecting the brain, spine, and nervous system.
+
+Services Include:
+• Headache & Migraine Treatment
+• Stroke Evaluation
+• Nerve Pain Management
+• Epilepsy Care
+• Neurological Consultation
+
+Advanced neurological care with compassionate treatment.
+    `,
+  },
+
+  Pediatrics: {
+    title: "Pediatrics Department",
+    content: `
+The Pediatrics Department provides complete healthcare services for newborns, infants, and children.
+
+Services Include:
+• Child Health Checkups
+• Vaccination Programs
+• Fever & Infection Treatment
+• Growth Monitoring
+
+Safe and compassionate care for every child.
+    `,
+  },
+
+  ENT: {
+    title: "ENT Department",
+    content: `
+The ENT Department specializes in ear, nose, and throat conditions.
+
+Services Include:
+• Ear Infection Treatment
+• Hearing Assessment
+• Sinus & Allergy Care
+• Tonsil Treatment
+
+Helping patients breathe, hear, and speak comfortably.
+    `,
+  },
+
+  Dermatology: {
+    title: "Dermatology Department",
+    content: `
+Our Dermatology Department offers complete skin, hair, and nail care.
+
+Services Include:
+• Acne Treatment
+• Hair Fall Care
+• Skin Allergy Care
+• Pigmentation Solutions
+
+Advanced skincare solutions for healthy skin.
+    `,
+  },
+
+  "General Medicine": {
+    title: "General Medicine Department",
+    content: `
+Our physicians provide expert care for fever, diabetes, BP, infections, and wellness.
+
+Services Include:
+• Fever Treatment
+• Diabetes Management
+• BP Care
+• Thyroid Evaluation
+
+Focused on long-term health management.
+    `,
+  },
+
+  "Emergency Care": {
+    title: "Emergency Care Department",
+    content: `
+Our Emergency Department operates 24/7 for urgent medical situations.
+
+Services Include:
+• Trauma Care
+• Accident Treatment
+• Critical Care
+• Emergency Consultation
+
+Fast medical response when every second matters.
+    `,
+  },
+};
   return (
     <div className="bg-white overflow-x-hidden">
 
@@ -88,6 +216,44 @@ const sendEmail = (e) => {
             <span>Shamshabad, Hyderabad</span>
           </div>
         </div>
+        {/* DEPARTMENT MODAL */}
+{selectedDepartment && (
+  <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-6">
+
+    <div className="bg-white rounded-[35px] max-w-3xl w-full p-10 relative shadow-2xl animate-fadeIn">
+
+      {/* Close */}
+      <button
+        onClick={() => setSelectedDepartment(null)}
+        className="absolute top-6 right-6 text-3xl text-gray-500 hover:text-red-500"
+      >
+        ✕
+      </button>
+
+      <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
+        Department Details
+      </span>
+
+      <h2 className="text-4xl font-bold text-[#0A2A5E] mt-3">
+        {departmentDetails[selectedDepartment].title}
+      </h2>
+
+      <div className="w-20 h-1 bg-[#0A2A5E] rounded-full mt-5 mb-8"></div>
+
+      <p className="text-gray-600 leading-loose whitespace-pre-line text-lg">
+        {departmentDetails[selectedDepartment].content}
+      </p>
+
+      <a
+        href="#appointment"
+        onClick={() => setSelectedDepartment(null)}
+        className="inline-block mt-8 bg-[#0A2A5E] text-white px-8 py-4 rounded-full hover:bg-blue-900 transition"
+      >
+        Book Appointment
+      </a>
+    </div>
+  </div>
+)}
       </div>
 
       {/* NAVBAR */}
@@ -309,9 +475,15 @@ const sendEmail = (e) => {
             Advanced healthcare with experienced specialists.
           </p>
 
-          <button className="mt-5 text-[#0A2A5E] font-semibold">
-            Learn More →
-          </button>
+          <button
+  onClick={() => setSelectedDepartment(dept)}
+  className="text-[#0A2A5E] font-bold mt-5 hover:text-blue-600 transition"
+>
+  Know More →
+</button>
+
+
+
         </div>
       ))}
     </div>
