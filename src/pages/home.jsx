@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 import {
   Phone,
@@ -16,6 +19,12 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {
+  useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+}, []);
   const [formData, setFormData] = useState({
   name: "",
   phone: "",
@@ -177,7 +186,7 @@ const sendEmail = (e) => {
       >
           <div className="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 items-center gap-12">
 
-          <div>
+          <div data-aos="fade-right">
             <span className="inline-block bg-white/20 px-5 py-3 rounded-full text-sm font-medium">
               Premium Multi-Speciality Hospital
             </span>
@@ -221,7 +230,7 @@ const sendEmail = (e) => {
 <section className="bg-white py-14">
   <div className="max-w-7xl mx-auto px-6">
 
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid  grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up">
 
       <div className="bg-[#F8FAFC] rounded-[30px] p-8 text-center shadow-md">
         <h3 className="text-5xl font-bold text-[#0A2A5E]">
@@ -272,7 +281,7 @@ const sendEmail = (e) => {
       Our Specialities
     </h2>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up">
 
       {[
         "Orthopedics",
@@ -333,7 +342,7 @@ const sendEmail = (e) => {
     </div>
 
     {/* Doctor Cards */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16" data-aos="fade-up">
 
       {/* DOCTOR 1 */}
 <div className="bg-[#F8FAFC] rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-2xl hover:-translate-y-2 transition duration-300">
@@ -570,12 +579,14 @@ const sendEmail = (e) => {
 </section>
 {/* TESTIMONIALS */}
 
+{/* TESTIMONIALS */}
 <section className="bg-[#F8FAFC] py-28">
   <div className="max-w-7xl mx-auto px-6">
 
-
     <div className="text-center">
+
       <div className="w-24 h-1 bg-[#0A2A5E] rounded-full mx-auto mb-5"></div>
+
       <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
         Testimonials
       </span>
@@ -583,56 +594,113 @@ const sendEmail = (e) => {
       <h2 className="text-5xl font-bold text-[#0A2A5E] mt-4">
         What Our Patients Say
       </h2>
+
+      <p className="text-gray-500 mt-5 max-w-2xl mx-auto text-lg">
+        Trusted healthcare and compassionate treatment experiences
+        shared by our patients.
+      </p>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+    {/* Cards */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16" data-aos="fade-up">
 
       {/* Testimonial 1 */}
-      <div className="bg-white rounded-[35px] p-10 shadow-lg hover:shadow-2xl transition">
-        <div className="text-yellow-500 text-2xl">
+      <div className="bg-white rounded-[35px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <div className="flex items-center gap-4">
+
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Patient"
+            className="w-20 h-20 rounded-full object-cover border-4 border-[#0A2A5E]/10"
+          />
+
+          <div>
+            <h4 className="text-2xl font-bold text-[#0A2A5E]">
+              Ravi Kumar
+            </h4>
+
+            <p className="text-gray-500">
+              Shamshabad
+            </p>
+          </div>
+        </div>
+
+        <div className="text-yellow-500 text-2xl mt-5">
           ⭐⭐⭐⭐⭐
         </div>
 
-        <p className="text-gray-600 mt-5 text-lg leading-relaxed">
+        <p className="text-gray-600 mt-5 leading-relaxed text-lg">
           Excellent doctors and caring staff.
-          The treatment was professional and smooth.
+          The treatment process was smooth and professional.
+          Highly recommended hospital.
         </p>
-
-        <h4 className="font-bold text-[#0A2A5E] mt-6">
-          Ravi Kumar
-        </h4>
       </div>
 
       {/* Testimonial 2 */}
-      <div className="bg-white rounded-[35px] p-10 shadow-lg hover:shadow-2xl transition">
-        <div className="text-yellow-500 text-2xl">
+      <div className="bg-white rounded-[35px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <div className="flex items-center gap-4">
+
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="Patient"
+            className="w-20 h-20 rounded-full object-cover border-4 border-[#0A2A5E]/10"
+          />
+
+          <div>
+            <h4 className="text-2xl font-bold text-[#0A2A5E]">
+              Priya Sharma
+            </h4>
+
+            <p className="text-gray-500">
+              Hyderabad
+            </p>
+          </div>
+        </div>
+
+        <div className="text-yellow-500 text-2xl mt-5">
           ⭐⭐⭐⭐⭐
         </div>
 
-        <p className="text-gray-600 mt-5 text-lg leading-relaxed">
-          Clean facilities and highly experienced doctors.
-          Strongly recommended.
+        <p className="text-gray-600 mt-5 leading-relaxed text-lg">
+          Clean hospital, experienced doctors and
+          excellent patient care. Very satisfied
+          with the treatment.
         </p>
-
-        <h4 className="font-bold text-[#0A2A5E] mt-6">
-          Priya Sharma
-        </h4>
       </div>
 
       {/* Testimonial 3 */}
-      <div className="bg-white rounded-[35px] p-10 shadow-lg hover:shadow-2xl transition">
-        <div className="text-yellow-500 text-2xl">
+      <div className="bg-white rounded-[35px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <div className="flex items-center gap-4">
+
+          <img
+            src="https://randomuser.me/api/portraits/men/75.jpg"
+            alt="Patient"
+            className="w-20 h-20 rounded-full object-cover border-4 border-[#0A2A5E]/10"
+          />
+
+          <div>
+            <h4 className="text-2xl font-bold text-[#0A2A5E]">
+              Ahmed Khan
+            </h4>
+
+            <p className="text-gray-500">
+              Shamshabad
+            </p>
+          </div>
+        </div>
+
+        <div className="text-yellow-500 text-2xl mt-5">
           ⭐⭐⭐⭐⭐
         </div>
 
-        <p className="text-gray-600 mt-5 text-lg leading-relaxed">
-          Emergency care was fast and professional.
-          Very thankful to the hospital team.
+        <p className="text-gray-600 mt-5 leading-relaxed text-lg">
+          Emergency care was quick and professional.
+          Doctors explained everything clearly.
+          Great experience.
         </p>
-
-        <h4 className="font-bold text-[#0A2A5E] mt-6">
-          Ahmed Khan
-        </h4>
       </div>
 
     </div>
