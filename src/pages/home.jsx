@@ -638,6 +638,90 @@ const sendEmail = (e) => {
     </div>
   </div>
 </section>
+{/* TRUST & CERTIFICATIONS */}
+<section className="bg-white py-24">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+
+    <div className="w-24 h-1 bg-[#0A2A5E] rounded-full mx-auto mb-5"></div>
+
+    <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
+      Why Patients Trust Us
+    </span>
+
+    <h2 className="text-5xl font-bold text-[#0A2A5E] mt-4">
+      Trusted Healthcare,
+      <br />
+      Exceptional Care
+    </h2>
+
+    <p className="text-gray-500 mt-5 max-w-3xl mx-auto text-lg">
+      Trident Hospitals combines expert doctors, advanced medical care,
+      modern facilities and compassionate treatment to deliver trusted
+      healthcare in Shamshabad, Hyderabad.
+    </p>
+
+    {/* Trust Cards */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+
+      {/* Card 1 */}
+      <div className="bg-[#F8FAFC] rounded-[35px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <div className="text-5xl">🏥</div>
+
+        <h3 className="text-2xl font-bold text-[#0A2A5E] mt-5">
+          Multi-Speciality Care
+        </h3>
+
+        <p className="text-gray-500 mt-4">
+          Comprehensive healthcare across multiple specialities.
+        </p>
+      </div>
+
+      {/* Card 2 */}
+      <div className="bg-[#F8FAFC] rounded-[35px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <div className="text-5xl">👨‍⚕️</div>
+
+        <h3 className="text-2xl font-bold text-[#0A2A5E] mt-5">
+          Expert Doctors
+        </h3>
+
+        <p className="text-gray-500 mt-4">
+          Experienced specialists providing quality medical care.
+        </p>
+      </div>
+
+      {/* Card 3 */}
+      <div className="bg-[#F8FAFC] rounded-[35px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <div className="text-5xl">🚑</div>
+
+        <h3 className="text-2xl font-bold text-[#0A2A5E] mt-5">
+          24/7 Emergency
+        </h3>
+
+        <p className="text-gray-500 mt-4">
+          Emergency healthcare services available around the clock.
+        </p>
+      </div>
+
+      {/* Card 4 */}
+      <div className="bg-[#F8FAFC] rounded-[35px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <div className="text-5xl">❤️</div>
+
+        <h3 className="text-2xl font-bold text-[#0A2A5E] mt-5">
+          Patient-Centered Care
+        </h3>
+
+        <p className="text-gray-500 mt-4">
+          Compassionate care focused on patient comfort and recovery.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 {/* APPOINTMENT SECTION */}
 <section
   id="appointment"
