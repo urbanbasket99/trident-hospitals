@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 import {
   Phone,
   Mail,
@@ -14,6 +16,43 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+});
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .send(
+      "service_tl54p3g",
+      "template_rfm450v",
+      {
+        name: formData.name,
+        phone: formData.phone,
+      },
+      "M-9co9bnjNuU-Nvxs"
+    )
+    .then(() => {
+      alert("Appointment Request Sent Successfully!");
+      setFormData({
+        name: "",
+        phone: "",
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Failed to send appointment request.");
+    });
+};
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -87,10 +126,13 @@ export default function Home() {
           </ul>
 
           {/* BUTTON */}
-          <button className="hidden lg:flex bg-[#0A2A5E] text-white px-6 py-3 rounded-full shadow-lg items-center gap-2 hover:bg-blue-900 transition">
-            <Calendar size={18} />
-            Book Appointment
-          </button>
+   <a
+  href="#appointment"
+  className="hidden lg:flex bg-[#0A2A5E] text-white px-6 py-3 rounded-full shadow-lg items-center gap-2"
+>
+  <Calendar size={18} />
+  Book Appointment
+</a>
 
           {/* MOBILE MENU */}
           <button
@@ -153,9 +195,12 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-10">
-              <button className="bg-white text-[#0A2A5E] px-8 py-4 rounded-full font-semibold">
-                Book Appointment
-              </button>
+             <a
+  href="#appointment"
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+>
+  Book Appointment
+</a>
 
               <button className="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-[#0A2A5E] transition">
                 Emergency Care
@@ -265,9 +310,12 @@ export default function Home() {
       Specialist in orthopedic treatments and advanced bone care.
     </p>
 
-    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
-      Book Appointment
-    </button>
+   <a
+  href="#appointment"
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+>
+  Book Appointment
+</a>
   </div>
 </div>
 
@@ -293,9 +341,12 @@ export default function Home() {
       Expert in heart care, cardiac diagnosis and treatments.
     </p>
 
-    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
-      Book Appointment
-    </button>
+    <a
+  href="#appointment"
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+>
+  Book Appointment
+</a>
   </div>
 </div>
 
@@ -321,9 +372,12 @@ export default function Home() {
       Specialist in neurological disorders and brain care.
     </p>
 
-    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
-      Book Appointment
-    </button>
+   <a
+  href="#appointment"
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+>
+  Book Appointment
+</a>
   </div>
 </div>
 {/* DOCTOR 4 */}
@@ -348,9 +402,12 @@ export default function Home() {
       Specialist in neurological disorders and brain care.
     </p>
 
-    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
-      Book Appointment
-    </button>
+    <a
+  href="#appointment"
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+>
+  Book Appointment
+</a>
   </div>
 </div>
 {/* DOCTOR 5 */}
@@ -375,9 +432,12 @@ export default function Home() {
       Specialist in neurological disorders and brain care.
     </p>
 
-    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
-      Book Appointment
-    </button>
+    <a
+  href="#appointment"
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+>
+  Book Appointment
+</a>
   </div>
 </div>
 {/* DOCTOR 6 */}
@@ -402,9 +462,12 @@ export default function Home() {
       Specialist in neurological disorders and brain care.
     </p>
 
-    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
-      Book Appointment
-    </button>
+    <a
+  href="#appointment"
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+>
+  Book Appointment
+</a>
   </div>
 </div>
 {/* DOCTOR 7 */}
@@ -429,9 +492,12 @@ export default function Home() {
       Specialist in neurological disorders and brain care.
     </p>
 
-    <button className="mt-6 bg-[#0A2A5E] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition">
-      Book Appointment
-    </button>
+    <a
+  href="#appointment"
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+>
+  Book Appointment
+</a>
   </div>
 </div>
 
@@ -531,9 +597,6 @@ export default function Home() {
 
     {/* Heading */}
     <div className="text-center">
-      <span className="uppercase tracking-wider text-blue-200 font-semibold">
-        Book Appointment
-      </span>
 
       <h2 className="text-5xl font-bold mt-4">
         Schedule Your Visit
@@ -546,6 +609,7 @@ export default function Home() {
 
     {/* Form Card */}
     <div className="mt-16 bg-white rounded-[40px] p-10 lg:p-14 shadow-2xl text-black">
+      <form onSubmit={sendEmail}>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -564,6 +628,7 @@ export default function Home() {
             <option>ENT</option>
             <option>Dermatology</option>
           </select>
+          
         </div>
 
         {/* Doctor */}
@@ -592,28 +657,28 @@ export default function Home() {
 
         {/* Name */}
         <div>
-          <label className="block mb-2 font-semibold text-[#0A2A5E]">
-            Full Name
-          </label>
-
-          <input
-            type="text"
-            placeholder="Enter Full Name"
-            className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
-          />
+         <input
+  type="text"
+  name="name"
+  placeholder="Enter Full Name"
+  value={formData.name}
+  onChange={handleChange}
+  className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
+  required
+/>
         </div>
 
         {/* Phone */}
         <div>
-          <label className="block mb-2 font-semibold text-[#0A2A5E]">
-            Phone Number
-          </label>
-
           <input
-            type="text"
-            placeholder="Enter Phone Number"
-            className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
-          />
+  type="text"
+  name="phone"
+  placeholder="Enter Phone Number"
+  value={formData.phone}
+  onChange={handleChange}
+  className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
+  required
+/>
         </div>
 
         {/* Symptoms */}
@@ -628,16 +693,23 @@ export default function Home() {
             className="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#0A2A5E]"
           />
         </div>
+        
       </div>
 
       {/* Button */}
       <div className="text-center mt-10">
-        <button className="bg-[#0A2A5E] text-white px-10 py-4 rounded-full hover:bg-blue-900 transition shadow-xl font-semibold">
-          Book Appointment
-        </button>
+        <button
+  type="submit"
+  className="bg-[#0A2A5E] text-white px-10 py-4 rounded-full hover:bg-blue-900 transition shadow-xl font-semibold"
+>
+  Book Appointment
+</button>
       </div>
+      </form>
     </div>
+    
   </div>
+  
 </section>
 
       <section className="py-20 bg-white">
