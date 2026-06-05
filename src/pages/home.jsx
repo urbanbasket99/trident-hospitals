@@ -3,9 +3,6 @@ import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
-
-
 import {
   Phone,
   Mail,
@@ -1238,9 +1235,25 @@ Fast medical response when every second matters.
     </div>
 
     {/* Bottom Footer */}
-    <div className="border-t border-blue-800 mt-16 pt-8 text-center text-blue-200">
-      © 2026 Trident Hospitals. All Rights Reserved.
-    </div>
+   <div className="border-t border-blue-800 mt-16 pt-8 text-center text-blue-200 space-y-2">
+
+  <p>
+    © 2026 Trident Hospitals. All Rights Reserved.
+  </p>
+
+  <p className="text-sm">
+    Design & Developed by{" "}
+    <a
+      href="https://myprofile-seven-sable.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white font-semibold hover:text-blue-300 transition duration-300"
+    >
+      CtrlAltShift Web Studio
+    </a>
+  </p>
+
+</div>
   </div>
   {/* Social Icons */}
 <div className="flex justify-center lg:justify-start gap-4 mt-8">
