@@ -215,6 +215,37 @@ Fast medical response when every second matters.
             <MapPin size={16} />
             <span>Shamshabad, Hyderabad</span>
           </div>
+          {/* SOCIAL ICONS */}
+<div className="flex items-center gap-4 text-lg">
+
+  <a
+    href="https://facebook.com/tridenthospitals"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-blue-300 transition duration-300"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="https://instagram.com/tridenthospitaldigital"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-pink-300 transition duration-300"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    href="https://youtube.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-red-400 transition duration-300"
+  >
+    <FaYoutube />
+  </a>
+
+</div>
         </div>
         {/* DEPARTMENT MODAL */}
 {selectedDepartment && (
@@ -481,9 +512,6 @@ Fast medical response when every second matters.
 >
   Know More →
 </button>
-
-
-
         </div>
       ))}
     </div>
@@ -1218,7 +1246,7 @@ Fast medical response when every second matters.
 <div className="flex justify-center lg:justify-start gap-4 mt-8">
 
   <a
-    href="https://facebook.com"
+    href="https://facebook.com/tridenthospitals"
     target="_blank"
     className="bg-white text-[#071F45] p-4 rounded-full hover:scale-110 transition"
   >
@@ -1226,7 +1254,7 @@ Fast medical response when every second matters.
   </a>
 
   <a
-    href="https://instagram.com"
+    href="https://instagram.com/tridenthospitaldigital"
     target="_blank"
     className="bg-white text-[#071F45] p-4 rounded-full hover:scale-110 transition"
   >
