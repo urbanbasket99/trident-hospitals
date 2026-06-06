@@ -961,7 +961,7 @@ Fast medical response when every second matters.
         <img
           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
           alt="Orthopedic Blog"
-          className="w-full h-[250px] object-cover"
+        className="w-full h-[220px] object-cover rounded-t-[35px]"
         />
 
         <div className="p-8">
@@ -980,24 +980,24 @@ Fast medical response when every second matters.
           </p>
 
           <a
-  href="/#/blog/joint-pain"
-  className="mt-5 inline-block text-[#0A2A5E] font-bold"
->
-  Read More →
-</a>
+             href="/#/blog/joint-pain"
+         className="mt-5 inline-block text-[#0A2A5E] font-bold"
+            >
+               Read More →
+                      </a>
         </div>
-      </div>
+       </div>
 
-      {/* Blog 2 */}
-      <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+            {/* Blog 2 */}
+          <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
 
-        <img
+          <img
           src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56"
           alt="Heart Health"
           className="w-full h-[250px] object-cover"
-        />
+          />
 
-        <div className="p-8">
+           <div className="p-8">
 
           <span className="text-sm font-semibold text-[#0A2A5E] uppercase">
             Cardiology
@@ -1012,19 +1012,19 @@ Fast medical response when every second matters.
             heart health and reduce cardiac risks.
           </p>
 
-        <a
-  href="/#/blog/heart-health"
-  className="mt-5 inline-block text-[#0A2A5E] font-bold"
->
-  Read More →
-</a>
+          <a
+             href="/#/blog/heart-health"
+          className="mt-5 inline-block text-[#0A2A5E] font-bold"
+           >
+         Read More →
+        </a>
         </div>
-      </div>
+          </div>
 
-      {/* Blog 3 */}
-      <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+           {/* Blog 3 */}
+           <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
 
-        <img
+         <img
           src="https://images.unsplash.com/photo-1584515933487-779824d29309"
           alt="Pediatrics"
           className="w-full h-[250px] object-cover"
@@ -1045,25 +1045,122 @@ Fast medical response when every second matters.
             stay healthy and active.
           </p>
 
-  <a
-  href="/#/blog/child-immunity"
-  className="mt-5 inline-block text-[#0A2A5E] font-bold"
->
-  Read More →
-</a>
+          <a
+         href="/#/blog/child-immunity"
+        className="mt-5 inline-block text-[#0A2A5E] font-bold"
+        >
+          Read More →
+        </a>
         </div>
       </div>
 
-    </div>
+      
+      {/* Blog 4 */}
+     <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+     <img
+     src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8"
+      alt="Back Pain"
+      className="w-full h-[250px] object-cover"
+      / >
+
+      <div className="p-8 flex flex-col flex-grow">
+
+     <span className="text-sm font-semibold text-[#0A2A5E] uppercase">
+      Orthopedics
+      </span>
+
+      <h3 className="text-2xl font-bold text-[#0A2A5E] mt-3">
+      Common Causes of Back Pain
+      </h3>
+
+      <p className="text-gray-500 mt-4">
+      Learn the common causes of back pain and
+      when to consult an orthopedic doctor.
+     </p>
+
+     <a
+      href="/#/blog/back-pain"
+      className="mt-5 inline-block text-[#0A2A5E] font-bold"
+      >
+      Read More →
+      </a>
+       </div>
+        </div>
+          {/* Blog 5 */}
+  <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+     <img
+     src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8"
+      alt="Arthritis"
+      className="w-full h-[250px] object-cover"
+      / >
+
+      <div className="p-8 flex flex-col flex-grow">
+
+     <span className="text-sm font-semibold text-[#0A2A5E] uppercase">
+     Arthritis 
+           </span>
+
+      <h3 className="text-2xl font-bold text-[#0A2A5E] mt-3">
+      Common Causes of Arthritis
+      </h3>
+
+      <p className="text-gray-500 mt-4">
+      Learn the common causes of Arthritis and
+      when to consult an Arthritis  doctor.
+     </p>
+
+     <a
+      href="/#/blog/arthritis-symptoms"
+      className="mt-5 inline-block text-[#0A2A5E] font-bold"
+      >
+      Read More →
+      </a>
+       </div>
+        </div>
+  {/* Blog 6 */}
+        <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+     <img
+     src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8"
+      alt="Back Pain"
+      className="w-full h-[250px] object-cover"
+      / >
+
+      <div className="p-8 flex flex-col flex-grow">
+
+     <span className="text-sm font-semibold text-[#0A2A5E] uppercase">
+      Cardiology
+      </span>
+
+      <h3 className="text-2xl font-bold text-[#0A2A5E] mt-3">
+      How to improve heart health
+      
+            </h3>
+
+      <p className="text-gray-500 mt-4">
+      Learn how to imrove heart health and
+      when to consult an Cardiology doctor.
+     </p>
+
+     <a
+      href="/#/blog/heart-health"
+      className="mt-5 inline-block text-[#0A2A5E] font-bold"
+      >
+      Read More →
+      </a>
+       </div>
+        </div>
   </div>
-</section>
-{/* TRUST & CERTIFICATIONS */}
-<section className="bg-white py-24">
-  <div className="max-w-7xl mx-auto px-6 text-center">
+      </div>
+      
+          </section>
 
-    <div className="w-24 h-1 bg-[#0A2A5E] rounded-full mx-auto mb-5"></div>
+      {/* TRUST & CERTIFICATIONS */}
+      <section className="bg-white py-24">
+       <div className="max-w-7xl mx-auto px-6 text-center">
 
-    <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
+      <div className="w-24 h-1 bg-[#0A2A5E] rounded-full mx-auto mb-5"></div>
+
+     <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
       Why Patients Trust Us
     </span>
 
