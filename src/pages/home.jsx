@@ -18,12 +18,33 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {
+
+  const scrollToAppointment = () => {
+  const section = document.getElementById("appointment");
+
+  section?.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+  useEffect(() => {
+  if (window.location.hash === "#appointment") {
+    const section = document.getElementById("appointment");
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }
+}, []);
   const [selectedDepartment, setSelectedDepartment] = useState(null);
   useEffect(() => {
   AOS.init({
     duration: 1000,
-    once: true,
+    once: false,
   });
+
+  AOS.refresh();
 }, []);
   const [formData, setFormData] = useState({
   name: "",
@@ -273,7 +294,7 @@ Fast medical response when every second matters.
       </p>
 
       <a
-        href="#appointment"
+        href="/#appointment"
         onClick={() => setSelectedDepartment(null)}
         className="inline-block mt-8 bg-[#0A2A5E] text-white px-8 py-4 rounded-full hover:bg-blue-900 transition"
       >
@@ -298,31 +319,31 @@ Fast medical response when every second matters.
           <ul className="hidden lg:flex items-center gap-8 font-semibold text-[#0A2A5E]">
 
             <li>
-              <a href="#home" className="hover:text-blue-600 transition">
+              <a href="/#home" className="hover:text-blue-600 transition">
                 Home
               </a>
             </li>
 
             <li>
-              <a href="#departments" className="hover:text-blue-600 transition">
+              <a href="/#departments" className="hover:text-blue-600 transition">
                 Departments
               </a>
             </li>
 
             <li>
-              <a href="#doctors" className="hover:text-blue-600 transition">
+              <a href="/#doctors" className="hover:text-blue-600 transition">
                 Doctors
               </a>
             </li>
 
             <li>
-              <a href="#appointment" className="hover:text-blue-600 transition">
+              <a href="/#appointment" className="hover:text-blue-600 transition">
                 Appointment
               </a>
             </li>
 
             <li>
-              <a href="#contact" className="hover:text-blue-600 transition">
+              <a href="/#contact" className="hover:text-blue-600 transition">
                 Contact
               </a>
             </li>
@@ -330,7 +351,13 @@ Fast medical response when every second matters.
 
           {/* BUTTON */}
    <a
-  href="#appointment"
+  onClick={() => {
+  document
+    .getElementById("appointment")
+    ?.scrollIntoView({
+      behavior: "smooth",
+    });
+}}
   className="hidden lg:flex bg-[#0A2A5E] text-white px-6 py-3 rounded-full shadow-lg items-center gap-2"
 >
   <Calendar size={18} />
@@ -362,7 +389,7 @@ Fast medical response when every second matters.
               Doctors
             </a>
 
-            <a href="#appointment" onClick={() => setMenuOpen(false)}>
+            <a href="/#appointment" onClick={() => setMenuOpen(false)}>
               Appointment
             </a>
 
@@ -398,12 +425,12 @@ Fast medical response when every second matters.
                    </p>
 
                       <div className="flex flex-wrap gap-4 mt-10">
-                   <a
-                        href="#appointment"
-                    className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 hover:scale-105 transition duration-300 transition"
-                        >
-                       Book Appointment
-                          </a>
+                  <button
+  onClick={scrollToAppointment}
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center"
+>
+  Book Appointment
+</button>
 
               <button className="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-[#0A2A5E] transition">
                 Emergency Care
@@ -563,12 +590,12 @@ Fast medical response when every second matters.
       Specialist in orthopedic treatments and advanced bone care.
     </p>
 
-   <a
-  href="#appointment"
-  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+   <button
+  onClick={scrollToAppointment}
+  className="bg-[#0A2A5E] text-white px-6 py-3 rounded-full"
 >
   Book Appointment
-</a>
+</button>
   </div>
 </div>
 
@@ -594,12 +621,12 @@ Fast medical response when every second matters.
       Expert in heart care, cardiac diagnosis and treatments.
     </p>
 
-    <a
-  href="#appointment"
-  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+   <button
+  onClick={scrollToAppointment}
+  className="bg-[#0A2A5E] text-white px-6 py-3 rounded-full"
 >
   Book Appointment
-</a>
+</button>
   </div>
 </div>
 
@@ -625,12 +652,12 @@ Fast medical response when every second matters.
       Specialist in neurological disorders and brain care.
     </p>
 
-   <a
-  href="#appointment"
-  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+  <button
+  onClick={scrollToAppointment}
+  className="bg-[#0A2A5E] text-white px-6 py-3 rounded-full"
 >
   Book Appointment
-</a>
+</button>
   </div>
 </div>
 {/* DOCTOR 4 */}
@@ -655,12 +682,12 @@ Fast medical response when every second matters.
       Specialist in neurological disorders and brain care.
     </p>
 
-    <a
-  href="#appointment"
-  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+   <button
+  onClick={scrollToAppointment}
+  className="bg-[#0A2A5E] text-white px-6 py-3 rounded-full"
 >
   Book Appointment
-</a>
+</button>
   </div>
 </div>
 {/* DOCTOR 5 */}
@@ -685,12 +712,12 @@ Fast medical response when every second matters.
       Specialist in neurological disorders and brain care.
     </p>
 
-    <a
-  href="#appointment"
-  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+    <button
+  onClick={scrollToAppointment}
+  className="bg-[#0A2A5E] text-white px-6 py-3 rounded-full"
 >
   Book Appointment
-</a>
+</button>
   </div>
 </div>
 {/* DOCTOR 6 */}
@@ -715,12 +742,12 @@ Fast medical response when every second matters.
       Specialist in neurological disorders and brain care.
     </p>
 
-    <a
-  href="#appointment"
-  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+    <button
+  onClick={scrollToAppointment}
+  className="bg-[#0A2A5E] text-white px-6 py-3 rounded-full"
 >
   Book Appointment
-</a>
+</button>
   </div>
 </div>
 {/* DOCTOR 7 */}
@@ -745,12 +772,12 @@ Fast medical response when every second matters.
       Specialist in neurological disorders and brain care.
     </p>
 
-    <a
-  href="#appointment"
-  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center hover:bg-blue-900 transition"
+   <button
+  onClick={scrollToAppointment}
+  className="bg-[#0A2A5E] text-white px-6 py-3 rounded-full"
 >
   Book Appointment
-</a>
+</button>
   </div>
 </div>
 
@@ -898,6 +925,133 @@ Fast medical response when every second matters.
           Doctors explained everything clearly.
           Great experience.
         </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+{/* HEALTH BLOGS */}
+<section className="bg-[#F8FAFC] py-28">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center">
+
+      <div className="w-24 h-1 bg-[#0A2A5E] rounded-full mx-auto mb-5"></div>
+
+      <span className="uppercase tracking-wider text-[#0A2A5E] font-semibold">
+        Health Tips & Blogs
+      </span>
+
+      <h2 className="text-5xl font-bold text-[#0A2A5E] mt-4">
+        Expert Health Advice
+      </h2>
+
+      <p className="text-gray-500 mt-5 max-w-2xl mx-auto text-lg">
+        Stay informed with expert healthcare advice,
+        wellness tips and medical guidance from
+        Trident Hospitals specialists.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+
+      {/* Blog 1 */}
+      <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <img
+          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
+          alt="Orthopedic Blog"
+          className="w-full h-[250px] object-cover"
+        />
+
+        <div className="p-8">
+
+          <span className="text-sm font-semibold text-[#0A2A5E] uppercase">
+            Orthopedics
+          </span>
+
+          <h3 className="text-2xl font-bold text-[#0A2A5E] mt-3">
+            5 Signs You Should Not Ignore Joint Pain
+          </h3>
+
+          <p className="text-gray-500 mt-4">
+            Learn the warning signs of joint pain and
+            when to consult an orthopedic specialist.
+          </p>
+
+          <a
+  href="/#/blog/joint-pain"
+  className="mt-5 inline-block text-[#0A2A5E] font-bold"
+>
+  Read More →
+</a>
+        </div>
+      </div>
+
+      {/* Blog 2 */}
+      <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <img
+          src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56"
+          alt="Heart Health"
+          className="w-full h-[250px] object-cover"
+        />
+
+        <div className="p-8">
+
+          <span className="text-sm font-semibold text-[#0A2A5E] uppercase">
+            Cardiology
+          </span>
+
+          <h3 className="text-2xl font-bold text-[#0A2A5E] mt-3">
+            10 Daily Habits for Better Heart Health
+          </h3>
+
+          <p className="text-gray-500 mt-4">
+            Small lifestyle changes can improve your
+            heart health and reduce cardiac risks.
+          </p>
+
+        <a
+  href="/#/blog/heart-health"
+  className="mt-5 inline-block text-[#0A2A5E] font-bold"
+>
+  Read More →
+</a>
+        </div>
+      </div>
+
+      {/* Blog 3 */}
+      <div className="bg-white rounded-[35px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition duration-300">
+
+        <img
+          src="https://images.unsplash.com/photo-1584515933487-779824d29309"
+          alt="Pediatrics"
+          className="w-full h-[250px] object-cover"
+        />
+
+        <div className="p-8">
+
+          <span className="text-sm font-semibold text-[#0A2A5E] uppercase">
+            Pediatrics
+          </span>
+
+          <h3 className="text-2xl font-bold text-[#0A2A5E] mt-3">
+            How To Improve Your Child's Immunity
+          </h3>
+
+          <p className="text-gray-500 mt-4">
+            Discover simple health tips to help children
+            stay healthy and active.
+          </p>
+
+  <a
+  href="/#/blog/child-immunity"
+  className="mt-5 inline-block text-[#0A2A5E] font-bold"
+>
+  Read More →
+</a>
+        </div>
       </div>
 
     </div>
@@ -1098,8 +1252,14 @@ Fast medical response when every second matters.
       {/* Button */}
       <div className="text-center mt-10">
         <button
-  type="submit"
-  className="bg-[#0A2A5E] text-white px-10 py-4 rounded-full hover:bg-blue-900 transition shadow-xl font-semibold"
+  onClick={() => {
+    const section = document.getElementById("appointment");
+
+    section?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+  className="bg-[#0A2A5E] text-white px-8 py-4 rounded-full inline-flex items-center justify-center"
 >
   Book Appointment
 </button>
@@ -1194,7 +1354,7 @@ Fast medical response when every second matters.
           </li>
 
           <li>
-            <a href="#appointment" className="hover:text-white transition">
+            <a href="/#appointment" className="hover:text-white transition">
               Appointment
             </a>
           </li>
@@ -1241,17 +1401,17 @@ Fast medical response when every second matters.
     © 2026 Trident Hospitals. All Rights Reserved.
   </p>
 
-  <p className="text-sm">
-    Design & Developed by{" "}
-    <a
-      href="https://myprofile-seven-sable.vercel.app/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-white font-semibold hover:text-blue-300 transition duration-300"
-    >
-      CtrlAltShift Web Studio
-    </a>
-  </p>
+ <p className="text-sm">
+  Crafted with ❤️ by{" "}
+  <a
+    href="https://myprofile-seven-sable.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white font-semibold hover:text-blue-300 transition duration-300"
+  >
+    CtrlAltShift Web Studio
+  </a>
+</p>
 
 </div>
   </div>
