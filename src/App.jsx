@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home";
-
+import ScrollToTop from "./components/ScrollToTop";
 import JointPain from "./pages/blogs/JointPain";
 import HeartHealth from "./pages/blogs/HeartHealth";
 import ChildImmunity from "./pages/blogs/ChildImmunity";
@@ -76,6 +76,7 @@ function AppRoutes() {
   path="/hospital-near-airport"
   element={<HospitalNearAirport />}
 />
+
     </Routes>
   );
 }
@@ -87,6 +88,15 @@ function App() {
 
   return (
     <HashRouter>
+      <ScrollToTop />
+
+  <Routes>
+    <Route path="/" element={<Home />} />
+
+    {/* blog routes */}
+    {/* location routes */}
+
+  </Routes>
       <AppRoutes />
     </HashRouter>
   );
