@@ -1404,92 +1404,196 @@ Fast medical response when every second matters.
 <section
   id="contact"
   className="bg-[#071F45] text-white pt-24 pb-10"
->
+  >
   <div className="max-w-7xl mx-auto px-6">
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-      {/* Hospital Info */}
-      <div>
-        <img
-          src="/logo.png"
-          alt="Trident Hospitals"
-          className="h-20 mb-5 bg-white rounded-2xl p-2"
-        />
+  {/* HOSPITAL INFO */}
+  <div>
+    <h3 className="text-2xl font-bold mb-5 text-white">
+      Trident Hospitals
+    </h3>
 
-        <p className="text-blue-100 leading-relaxed">
-          Trident Hospitals provides advanced multi-speciality
-          healthcare with compassionate patient care,
-          expert specialists, and modern technology.
-        </p>
-      </div>
+    <div className="space-y-4 text-blue-100">
 
-      {/* Quick Links */}
-      <div>
-        <h3 className="text-2xl font-bold mb-6">
-          Quick Links
-        </h3>
+      <p className="flex items-center gap-3">
+        📞 080087 00951
+      </p>
 
-        <ul className="space-y-4 text-blue-100">
+      <p className="flex items-center gap-3">
+        ✉ tridenthospital@gmail.com
+      </p>
 
-          <li>
-            <a href="#home" className="hover:text-white transition">
-              Home
-            </a>
-          </li>
+      <p className="flex items-center gap-3">
+        📍 Shamshabad, Hyderabad
+      </p>
 
-          <li>
-            <a href="#departments" className="hover:text-white transition">
-              Departments
-            </a>
-          </li>
-
-          <li>
-            <a href="#doctors" className="hover:text-white transition">
-              Doctors
-            </a>
-          </li>
-
-          <li>
-            <a href="/#appointment" className="hover:text-white transition">
-              Appointment
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      {/* Departments */}
-      <div>
-        <h3 className="text-2xl font-bold mb-6">
-          Departments
-        </h3>
-
-        <ul className="space-y-4 text-blue-100">
-          <li>Orthopedics</li>
-          <li>Cardiology</li>
-          <li>Neurology</li>
-          <li>Pediatrics</li>
-          <li>ENT</li>
-        </ul>
-      </div>
-
-      {/* Contact */}
-      <div>
-        <h3 className="text-2xl font-bold mb-6">
-          Contact Us
-        </h3>
-
-        <div className="space-y-4 text-blue-100 text-lg">
-          <p>📞 080087 00951</p>
-          <p>✉ tridenthospital@gmail.com</p>
-          <p>📍 Shamshabad, Hyderabad</p>
-        </div>
-
-        <button className="mt-6 bg-white text-[#071F45] px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
-          Emergency Care
-        </button>
-      </div>
     </div>
+  </div>
+
+  {/* DEPARTMENTS */}
+  <div>
+    <h3 className="text-2xl font-bold mb-5 text-white">
+      Departments
+    </h3>
+
+    <ul className="space-y-3 text-blue-100">
+
+      <li>
+        <a
+          href="/#departments"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Orthopedics
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#departments"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Cardiology
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#departments"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Neurology
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#departments"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Pediatrics
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#departments"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          ENT
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  {/* QUICK LINKS */}
+  <div>
+    <h3 className="text-2xl font-bold mb-5 text-white">
+      Quick Links
+    </h3>
+
+    <ul className="space-y-3 text-blue-100">
+
+      <li>
+        <a
+          href="/#departments"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Departments
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#doctors"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Doctors
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#appointment"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Appointment
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#contact"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Contact
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  {/* SEO LINKS */}
+  <div>
+    <h3 className="text-2xl font-bold mb-5 text-white">
+      Popular Healthcare Searches
+    </h3>
+
+    <ul className="space-y-3 text-blue-100">
+
+      <li>
+        <a
+          href="/#/best-hospital-shamshabad"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Best Hospital in Shamshabad
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#/orthopedic-hospital-shamshabad"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Orthopedic Hospital in Shamshabad
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#/cardiologist-shamshabad"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Best Cardiologist in Shamshabad
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#/hospital-near-airport"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Hospital Near Shamshabad Airport
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="/#/hospital-near-airport"
+          className="hover:text-cyan-300 transition duration-300"
+        >
+          Emergency Hospital Near Airport
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
+
+     
 
     {/* Bottom Footer */}
    <div className="border-t border-blue-800 mt-16 pt-8 text-center text-blue-200 space-y-2">

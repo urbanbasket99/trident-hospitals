@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function BlogTemplate({
   category,
@@ -8,8 +9,42 @@ export default function BlogTemplate({
   content,
   ctaTitle,
   ctaText,
+  metaTitle,
+  metaDescription,
+  keywords,
 }) {
   return (
+    <>
+  <Helmet>
+    <title>{metaTitle || title}</title>
+
+    <meta
+      name="description"
+      content={metaDescription}
+    />
+
+    <meta
+      name="keywords"
+      content={keywords}
+    />
+
+    <meta
+      property="og:title"
+      content={metaTitle || title}
+    />
+
+    <meta
+      property="og:description"
+      content={metaDescription}
+    />
+
+    <meta
+      property="og:image"
+      content={image}
+    />
+  </Helmet>
+
+    
     <div className="bg-[#F8FAFC] min-h-screen py-20">
 
       <div className="max-w-5xl mx-auto px-6">
@@ -66,5 +101,7 @@ export default function BlogTemplate({
         </div>
       </div>
     </div>
+    </>
   );
+  
 }

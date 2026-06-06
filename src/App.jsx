@@ -10,6 +10,10 @@ import ArthritisSymptoms from "./pages/blogs/ArthritisSymptoms";
 import OrthopedicDoctor from "./pages/blogs/OrthopedicDoctor";
 import HeartWarningSigns from "./pages/blogs/HeartWarningSigns";
 import BloodPressureSymptoms from "./pages/blogs/BloodPressureSymptoms";
+import BestHospitalShamshabad from "./pages/locations/BestHospitalShamshabad";
+import OrthopedicHospitalShamshabad from "./pages/locations/OrthopedicHospitalShamshabad";
+import CardiologistShamshabad from "./pages/locations/CardiologistShamshabad";
+import HospitalNearAirport from "./pages/locations/HospitalNearAirport";
 
 function AppRoutes() {
   return (
@@ -54,6 +58,23 @@ function AppRoutes() {
 <Route
   path="/blog/blood-pressure-symptoms"
   element={<BloodPressureSymptoms />}
+/>
+
+<Route
+  path="/best-hospital-shamshabad"
+  element={<BestHospitalShamshabad />}
+/>
+<Route
+  path="/orthopedic-hospital-shamshabad"
+  element={<OrthopedicHospitalShamshabad />}
+/>
+<Route
+  path="/cardiologist-shamshabad"
+  element={<CardiologistShamshabad />}
+/>
+<Route
+  path="/hospital-near-airport"
+  element={<HospitalNearAirport />}
 />
     </Routes>
   );
