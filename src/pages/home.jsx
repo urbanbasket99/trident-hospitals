@@ -1238,6 +1238,95 @@ Fast medical response when every second matters.
     </div>
   </div>
 </section>
+{/* Popular Treatments */}
+<section className="py-12 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-8">
+      <h2 className="text-3xl font-bold text-[#0A2A5E]">
+        Popular Treatments
+      </h2>
+      <p className="text-gray-600 mt-2">
+        Expert healthcare services at Trident Hospitals
+      </p>
+    </div>
+
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+
+      <a
+        href="/#/knee-pain-treatment-shamshabad"
+        className="bg-white shadow-md rounded-xl p-4 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300 border hover:border-[#0A2A5E]"
+      >
+        <h3 className="text-sm font-semibold text-[#0A2A5E]">
+          Knee Pain
+        </h3>
+        <p className="text-xs text-gray-500 mt-1">
+          Treatment
+        </p>
+      </a>
+
+      <a
+        href="/#/heart-specialist-shamshabad"
+        className="bg-white shadow-md rounded-xl p-4 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300 border hover:border-[#0A2A5E]"
+      >
+        <h3 className="text-sm font-semibold text-[#0A2A5E]">
+          Heart
+        </h3>
+        <p className="text-xs text-gray-500 mt-1">
+          Specialist
+        </p>
+      </a>
+
+      <a
+        href="/#/ent-specialist-shamshabad"
+        className="bg-white shadow-md rounded-xl p-4 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300 border hover:border-[#0A2A5E]"
+      >
+        <h3 className="text-sm font-semibold text-[#0A2A5E]">
+          ENT
+        </h3>
+        <p className="text-xs text-gray-500 mt-1">
+          Specialist
+        </p>
+      </a>
+
+      <a
+        href="/#/child-specialist-shamshabad"
+        className="bg-white shadow-md rounded-xl p-4 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300 border hover:border-[#0A2A5E]"
+      >
+        <h3 className="text-sm font-semibold text-[#0A2A5E]">
+          Child
+        </h3>
+        <p className="text-xs text-gray-500 mt-1">
+          Specialist
+        </p>
+      </a>
+
+      <a
+        href="/#/back-pain-treatment-shamshabad"
+        className="bg-white shadow-md rounded-xl p-4 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300 border hover:border-[#0A2A5E]"
+      >
+        <h3 className="text-sm font-semibold text-[#0A2A5E]">
+          Back Pain
+        </h3>
+        <p className="text-xs text-gray-500 mt-1">
+          Treatment
+        </p>
+      </a>
+
+      <a
+        href="/#/emergency-care-shamshabad"
+        className="bg-white shadow-md rounded-xl p-4 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300 border hover:border-[#0A2A5E]"
+      >
+        <h3 className="text-sm font-semibold text-[#0A2A5E]">
+          Emergency
+        </h3>
+        <p className="text-xs text-gray-500 mt-1">
+          Care
+        </p>
+      </a>
+
+    </div>
+  </div>
+</section>
 {/* APPOINTMENT SECTION */}
 <section
   id="appointment"
