@@ -1442,7 +1442,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#departments"
+          href="/#/#departments"
           className="hover:text-cyan-300 transition duration-300"
         >
           Orthopedics
@@ -1451,7 +1451,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#departments"
+          href="/#/#departments"
           className="hover:text-cyan-300 transition duration-300"
         >
           Cardiology
@@ -1460,7 +1460,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#departments"
+          href="/#/#departments"
           className="hover:text-cyan-300 transition duration-300"
         >
           Neurology
@@ -1469,7 +1469,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#departments"
+         href="/#/#departments"
           className="hover:text-cyan-300 transition duration-300"
         >
           Pediatrics
@@ -1478,7 +1478,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#departments"
+          href="/#/#departments"
           className="hover:text-cyan-300 transition duration-300"
         >
           ENT
@@ -1498,7 +1498,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#departments"
+         href="/#/#departments"
           className="hover:text-cyan-300 transition duration-300"
         >
           Departments
@@ -1507,7 +1507,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#doctors"
+          href="/#/#doctors"
           className="hover:text-cyan-300 transition duration-300"
         >
           Doctors
@@ -1516,7 +1516,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#appointment"
+          href="/#/#appointment"
           className="hover:text-cyan-300 transition duration-300"
         >
           Appointment
@@ -1525,7 +1525,7 @@ Fast medical response when every second matters.
 
       <li>
         <a
-          href="/#contact"
+          href="/#/#contact"
           className="hover:text-cyan-300 transition duration-300"
         >
           Contact

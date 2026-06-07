@@ -87,16 +87,10 @@ function App() {
   }
 
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <ScrollToTop />
 
-  <Routes>
-    <Route path="/" element={<Home />} />
-
-    {/* blog routes */}
-    {/* location routes */}
-
-  </Routes>
+  
       <AppRoutes />
     </HashRouter>
   );
